@@ -26,7 +26,10 @@ class _BaseInputState extends State<BaseInput> {
   }
 
   InputDecoration textDeco(String hint) {
-    return InputDecoration(hintText: hint, border: OutlineInputBorder());
+    return InputDecoration(
+        hintText: hint,
+        hintStyle: TextStyle(fontSize: 16.0, color: Colors.black),
+        border: OutlineInputBorder());
   }
 
   @override
@@ -34,7 +37,7 @@ class _BaseInputState extends State<BaseInput> {
     return Container(
       margin: EdgeInsets.symmetric(vertical: _marginVertical),
       child: TextFormField(
-        obscureText: !_isPassword,
+        obscureText: _isPassword,
         decoration: textDeco(_hint),
       ),
     );

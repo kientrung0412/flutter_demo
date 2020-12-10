@@ -24,7 +24,7 @@ class FormLogin extends StatelessWidget {
       child: Form(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         BaseInput(hint: "Tên người dùng"),
-        BaseInput(hint: "Mật khẩu"),
+        BaseInput(hint: "Mật khẩu", isPassword: true,),
         BaseButton(
           title: "Đăng nhập",
           panddingHorizontal: 16,
